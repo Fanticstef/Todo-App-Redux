@@ -62,7 +62,7 @@ const TodoApp = () => {
                                                     </p>
                                                     <div className="flex gap-3">
                                                         <button
-                                                            className='btn btn-neutral text-white'
+                                                            className='btn btn-neutral md:btn btn-sm text-white'
                                                             onClick={() => dispatch(toggleTodo(item.id))}>
                                                             {item.completed ? "Undo" : "Completed"}
                                                         </button>
