@@ -44,7 +44,7 @@ const TodoApp = () => {
                                 onChange={(e) => setTodo(e.target.value)} />
 
                             <button
-                                className='btn btn-neutral md:btn-lg md:px-10'
+                                className='btn btn-neutral md:btn-lg px-10'
                                 onClick={handleAddOrUpdateTodo}>
                                     {edit ? "Update" : "Add"}
                                 </button>
@@ -67,10 +67,10 @@ const TodoApp = () => {
                                                             {item.completed ? "Undo" : "Completed"}
                                                         </button>
                                                         <button 
-                                                            className='btn md:btn btn-sm bg-green-600 hover:bg-green-700 text-white'
+                                                            className='btn bg-green-600 hover:bg-green-700 text-white md:btn btn-sm'
                                                             onClick={() => handleEdit(item)}>Edit</button>
                                                         <button
-                                                            className='btn md:btn btn-sm bg-red-600 hover:bg-red-700 text-white'
+                                                            className='btn bg-red-600 hover:bg-red-700 text-white md:btn btn-sm'
                                                             onClick={() => dispatch(deleteTodo(item.id))}>Delete</button>
                                                     </div>
                                                 </div>
