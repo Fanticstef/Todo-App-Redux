@@ -62,15 +62,15 @@ const TodoApp = () => {
                                                     </p>
                                                     <div className="flex gap-3">
                                                         <button
-                                                            className='btn btn-neutral md:btn btn-xs text-white'
+                                                            className='btn btn-neutral text-white'
                                                             onClick={() => dispatch(toggleTodo(item.id))}>
                                                             {item.completed ? "Undo" : "Completed"}
                                                         </button>
                                                         <button 
-                                                            className='btn bg-green-600 md:btn btn-xs hover:bg-green-700 text-white'
+                                                            className='btn bg-green-600 hover:bg-green-700 text-white'
                                                             onClick={() => handleEdit(item)}>Edit</button>
                                                         <button
-                                                            className='btn bg-red-600 md:btn btn-xs hover:bg-red-700 text-white'
+                                                            className='btn bg-red-600 hover:bg-red-700 text-white'
                                                             onClick={() => dispatch(deleteTodo(item.id))}>Delete</button>
                                                     </div>
                                                 </div>
