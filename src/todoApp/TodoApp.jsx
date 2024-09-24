@@ -39,12 +39,12 @@ const TodoApp = () => {
                             <input
                                 type="text"
                                 placeholder="Type here"
-                                className={`input input-lg text-xl w-full max-w-[80%] me-2 ${edit ? 'input-bordered input-success' : 'input-bordered'}`}
+                                className={`input md:input-lg input-md text-xl w-full max-w-[80%] me-2 ${edit ? 'input-bordered input-success' : 'input-bordered'}`}
                                 value={todo}
                                 onChange={(e) => setTodo(e.target.value)} />
 
                             <button
-                                className='btn btn-neutral btn-lg px-10'
+                                className='btn btn-neutral md:btn-lg px-10'
                                 onClick={handleAddOrUpdateTodo}>
                                     {edit ? "Update" : "Add"}
                                 </button>
@@ -62,15 +62,15 @@ const TodoApp = () => {
                                                     </p>
                                                     <div className="flex gap-3">
                                                         <button
-                                                            className='btn btn-neutral text-white'
+                                                            className='btn btn-neutral md:btn btn-xs text-white'
                                                             onClick={() => dispatch(toggleTodo(item.id))}>
                                                             {item.completed ? "Undo" : "Completed"}
                                                         </button>
                                                         <button 
-                                                            className='btn bg-green-600 hover:bg-green-700 text-white'
+                                                            className='btn bg-green-600 md:btn btn-xs hover:bg-green-700 text-white'
                                                             onClick={() => handleEdit(item)}>Edit</button>
                                                         <button
-                                                            className='btn bg-red-600 hover:bg-red-700 text-white'
+                                                            className='btn bg-red-600 md:btn btn-xs hover:bg-red-700 text-white'
                                                             onClick={() => dispatch(deleteTodo(item.id))}>Delete</button>
                                                     </div>
                                                 </div>
